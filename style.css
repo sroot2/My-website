@@ -5,93 +5,49 @@
    rgba(140, 170, 177, 1) smoke blue
    rgba(0, 0, 0, 1) charcoal
 */
-
+@import "https://unpkg.com/open-props";
 @import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
   
 body {
   font-family: "Fondamento", cursive;
-  background-color: #026873;
-background-image: linear-gradient(90deg, rgba(207, 193, 213,.07) 50%, transparent 50%),
-linear-gradient(90deg, rgba(207, 193, 213,.13) 50%, transparent 50%),
-linear-gradient(90deg, transparent 50%, rgba(160, 160, 157,.17) 50%),
-linear-gradient(90deg, transparent 50%, rgba(207, 193, 213,.19) 50%);
-background-size: 13px, 29px, 37px, 53px;
+  background-image: var(--gradient-23);
 }
 
 article h1 {
-  font-weight: 900;
-  font-size: 6m;
-  color:rgba(207, 193, 213, 1);
+  font-size: 5rem;
+  text-align: center;
+  color: rgba(217, 217, 217, 1);
   
 }
 
 article p {
-  font-weight: 200;
-  font-size: 1.25rem;
-  color:rgba(210, 227, 228, 1);
-}
-
-article img{
-  border-radius: 2em;
-  width: 100px;
-  height: 100px;
+  font-size: 2rem;
+  color: rgba(217, 217, 217, 1);
 }
 
 aside h2 {
-  font-weight: 700;
-  font-size: 2rem;
-  color:rgba(207, 193, 213, 1);
+  font-size: 6rem;
+  color: rgba(217, 217, 217, 1);
  
 }
 
 h4{
-   font-weight: 200;
-  font-size: 1.25rem;
-  color:rgba(210, 227, 228, 1);
+  font-size: 3rem;
+  color: rgba(217, 217, 217, 1);
+  text-align: center;
+  margin-top: unset;
+  margin-bottom: auto;
 }
 
 figcaption{
-  font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color:rgba(210, 227, 228, 1);
 }
 
- img {
-    border: 8px solid rgba(140, 170, 177, 1);
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-  }
-
- 
-a {
+figure a {
   display: inline-block;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-a:link, 
-a:visited {
-  background: rgba(83, 75, 70, 1);
-  border-radius: 4px;
-  min-width: 5rem;
-  margin: .5em;
-  padding: .25rem;
-  color: rgba(140, 170, 177, 1);
-  text-align: center;
-}
-
-a:hover, 
-a:active {
-  background: rgba(207, 193, 213, 1);
-  border: 1px  solid rgba(160, 160, 157, 1);
-  color:  rgba(0, 0, 0, 1);
-  transform: scale(1.5);
-  transition: background .5s, transform .5 1s;
-
+  width: 100%;
+  max-height: auto;
 }
 
 main aside{
@@ -103,52 +59,42 @@ main aside{
 
 figure {
   background: rgba(140, 170, 177, 1);
-  padding: 20px;
-  width: 200px;
-}
-
-/* Hide Overlay */
-.overlay {
-  display: none;
-}
-
-/* Show Overlay on `target` */
-.overlay:target {
-  background: rgba(207, 193, 213, 1);
-  height: 100%;
-  width: 100%;
-
-  /* stretch overlay to fill entire screen  */
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-
-  /* vertical and center align with Flexbox */
+  padding: 30px;
+  width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-/*Media queries*/
-@media screen and (max-width: 700px){
-  main{
-  grid-template-columns: repeat(1, 1fr);
+figure img {
+  background: rgba(207, 193, 213, 1);
+  height: auto;
+  width: 100%;
+  margin: 5px;
 }
-  main h1{
-    text-align: center;
-    font-size: 1.5rem;
-  }
-    main img {
-    display: block;
-    
-    max-height: 50%;
-      width: 100%;
-  }
-  
-  aisde nav{
-    flex-direction: column;
-    
-  }
+
+nav {
+  display: flex;
+  gap: 3rem;
 }
+
+ a:link, 
+ a:visited {
+  background: rgba(83, 75, 70, 1);
+  border-radius: 4px;
+  min-width: 5rem;
+  margin: .5em;
+  padding: .25rem;
+  color: rgba(140, 170, 177, 1);
+  text-align: center;
+}
+
+ a:hover, 
+ a:active {
+  background: rgba(207, 193, 213, 1);
+  color:  rgba(0, 0, 0, 1);
+  transform: scale(1.5);
+  transition: background .5s, transform .5 1s;
+
+ }
