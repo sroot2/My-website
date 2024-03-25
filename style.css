@@ -20,7 +20,8 @@ article h1 {
   
 }
 
-article p {
+article p,
+aside p {
   font-size: 2rem;
   color: rgba(217, 217, 217, 1);
 }
@@ -67,6 +68,12 @@ figure {
   flex-direction: column;
 }
 
+article img {
+  border: 10px double rgba(210, 227, 228, 1);
+  width: 15%;
+  height: auto;
+}
+
 figure img {
   background: rgba(207, 193, 213, 1);
   height: auto;
@@ -98,3 +105,39 @@ nav {
   transition: background .5s, transform .5 1s;
 
  }
+
+ @media  (max-width: 600px) {
+  
+  article h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+article p,
+aside p {
+  font-size: 1rem;
+}
+
+aside h2 {
+  font-size: 3.5rem;
+ 
+}
+
+h4{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: unset;
+  margin-bottom: auto;
+}
+
+figcaption{
+  font-size: 1.5rem;
+} 
+
+figure img {
+  background: rgba(207, 193, 213, 1);
+  height: auto;
+  width: 100%;
+  margin: 5px;
+}
+}
